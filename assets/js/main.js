@@ -29,11 +29,11 @@ function loadPage(pageName, cb) {
         });
 }
 function links(){
-// let masinfo= document.getElementById('masinfo');
-// masinfo.addEventListener('click', () => {
-//     loadPage('masinfo', atras);
+let masinfo= document.getElementById('masinfo');
+masinfo.addEventListener('click', () => {
+    loadPage('masinfo', atras);
     
-// });
+});
 
 
 
