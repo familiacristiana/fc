@@ -1,19 +1,7 @@
-console.log('inicio')
-
-
-
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
- 
-
-    // Cargar la página de inicio por defecto
     loadPage('campania', links);
     pieAnio= document.getElementById('pieAño');
     pieAnio.innerHTML = `&copy; ${new Date().getFullYear()} Ministerio Familia Cristiana`;
-    // Manejar la navegación
-   // setupNavigation();
 });
 
 function loadPage(pageName, cb) {
@@ -28,29 +16,29 @@ function loadPage(pageName, cb) {
             }
         });
 }
+
 function links(){
-let masinfo= document.getElementById('masinfo');
-masinfo.addEventListener('click', () => {
-    loadPage('masinfo', atras);
-    
-});
+    let masinfo= document.getElementById('masinfo');
+    masinfo.addEventListener('click', () => {
+        loadPage('masinfo', atras);
 
-
-
+    });
     let canciones= document.getElementById('canciones');
     canciones.addEventListener('click', (e) => {
         e.preventDefault();
-      // Ir al inicio de la página
         window.scrollTo(0, 0);
         loadPage('canciones', atras);
+
+    });
+    let devocionales= document.getElementById('devocionales');
+    devocionales.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo(0, 0);
+        loadPage('devocionales', atras);
         
     });
-// let predicacionDomingo= document.getElementById('predicacionDomingo');
-// predicacionDomingo.addEventListener('click', () => {
-//     loadPage('predica20240922', atras);
-    
-// });
 }
+
 function atras(){
     let atras= document.getElementById('atras');
     atras.addEventListener('click', () => {
